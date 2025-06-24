@@ -196,6 +196,55 @@
                 grid-template-columns: 1fr;
             }
         }
+	    @media (max-width: 1024px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+        margin-top: 20px;
+        order: 2;
+    }
+
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .lesson-title {
+        font-size: 1.5em;
+    }
+
+    .topic h3 {
+        font-size: 1.2em;
+    }
+
+    .topic, .highlight, .law-item, .commandment {
+        font-size: 0.95em;
+    }
+
+    .laws-grid, .commandments, .principles-list {
+        grid-template-columns: 1fr !important;
+    }
+
+    ul, p {
+        word-wrap: break-word;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .header h1 {
+        font-size: 1.6em;
+    }
+
+    .lesson-title {
+        font-size: 1.2em;
+    }
+}
     </style>
 </head>
 <body>

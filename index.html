@@ -507,4 +507,20 @@
         </div>
     </div>
 </body>
+	<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('.toc a');
+    const sections = [...document.querySelectorAll('.lesson')];
+
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        let current = sections.find(section => scrollY >= section.offsetTop - 100);
+        if (current) {
+            links.forEach(link => link.classList.remove('active'));
+            let activeLink = document.querySelector(`.toc a[href="#${current.id}"]`);
+            if (activeLink) activeLink.classList.add('active');
+        }
+    });
+});
+</script>
 </html>

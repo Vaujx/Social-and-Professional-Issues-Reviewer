@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social and Professional Issues - Study Reviewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.1em;
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .main-content, .sidebar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar {
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+        .lesson {
+            margin-bottom: 40px;
+            border-left: 4px solid #3498db;
+            padding-left: 20px;
+        }
+        .lesson-title {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .topic {
+            margin-bottom: 25px;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #e9ecef;
+        }
+        .topic h3 {
+            color: #495057;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        .topic p {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+        .commandments {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .commandment {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #2196f3;
+        }
+        .commandment strong {
+            color: #1976d2;
+        }
+        .laws-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .law-item {
+            background: #fff3e0;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ff9800;
+        }
+        .law-item h4 {
+            color: #f57c00;
+            margin-bottom: 8px;
+        }
+        .principles-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .principle {
+            background: #e8f5e8;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+            color: #2e7d32;
+        }
+        .acronyms-section {
+            margin-bottom: 25px;
+        }
+        .acronyms-section h3 {
+            color: #8e24aa;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        .acronym {
+            background: #f3e5f5;
+            margin: 8px 0;
+            padding: 10px;
+            border-radius: 6px;
+            border-left: 3px solid #8e24aa;
+        }
+        .acronym strong {
+            color: #6a1b9a;
+        }
+        .toc {
+            margin-bottom: 25px;
+        }
+        .toc h3 {
+            color: #d32f2f;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        .toc ul {
+            list-style: none;
+            padding: 0;
+        }
+        .toc li {
+            margin: 8px 0;
+        }
+        .toc a {
+            color: #1976d2;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            display: block;
+        }
+        .toc a:hover {
+            background-color: #e3f2fd;
+        }
+        .highlight {
+            background: #fff59d;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #fbc02d;
+        }
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                position: static;
+                order: -1;
+            }
+            .commandments,
+            .laws-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Social and Professional Issues</h1>
+            <p>Comprehensive Study Reviewer</p>
+        </div>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <!-- Lesson 1 -->
+                <div class="lesson" id="lesson1">
+                    <h2 class="lesson-title">Lesson 1: Introduction to Social and Professional Issues</h2>
+                    <div class="topic">
+                        <h3>Computer Ethics</h3>
+                        <p>Computer ethics is the set of commonly agreed principles that govern the use of computers. It consists of philosophical guidelines or moral standards that aim to influence behavior and prevent harm, based on well-founded standards of right and wrong.</p>
+                    </div>
+                    <div class="topic">
+                        <h3>The Ten Commandments of Computer Ethics</h3>
+                        <div class="commandments">
+                            <div class="commandment"><strong>1.</strong> Thou shalt not use a computer to harm other people</div>
+                            <div class="commandment"><strong>2.</strong> Thou shalt not interfere with other people's computer work</div>
+                            <div class="commandment"><strong>3.</strong> Thou shalt not snoop around in other people's files</div>
+                            <div class="commandment"><strong>4.</strong> Thou shalt not use a computer to steal</div>
+                            <div class="commandment"><strong>5.</strong> Thou shalt not use a computer to bear false witness</div>
+                            <div class="commandment"><strong>6.</strong> Thou shalt not use or copy software for which you have not paid</div>
+                            <div class="commandment"><strong>7.</strong> Thou shalt not use other people's computer resources without authorization</div>
+                            <div class="commandment"><strong>8.</strong> Thou shalt not appropriate other people's intellectual output</div>
+                            <div class="commandment"><strong>9.</strong> Thou shalt think about the social consequences of the program you write</div>
+                            <div class="commandment"><strong>10.</strong> Thou shalt use a computer in ways that show consideration and respect</div>
+                        </div>
+                    </div>
+                    <div class="topic">
+                        <h3>Professional Ethics</h3>
+                        <p>A profession is a disciplined group of individuals who adhere to ethical standards and possess special knowledge and skills. Professional ethics are standards set by professional organizations for behavior and values within specific fields.</p>
+                        <div class="highlight">
+                            <strong>Universal Ethical Principles</strong>
+                            <div class="principles-list">
+                                <div class="principle">Honesty</div>
+                                <div class="principle">Trustworthiness</div>
+                                <div class="principle">Loyalty</div>
+                                <div class="principle">Respect for others</div>
+                                <div class="principle">Adherence to law</div>
+                                <div class="principle">Doing good</div>
+                                <div class="principle">Accountability</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="topic">
+                        <h3>Professional Responsibilities</h3>
+                        <p>Legal and moral duty of professionals to apply knowledge in ways that benefit clients and society without causing injury. Key responsibilities include mastering work, enhancing communication, acting as leaders, maintaining honesty and confidentiality, embracing positive attitudes, collaborating, possessing ambition, and serving as whistleblowers when necessary.</p>
+                    </div>
+                </div>
+
+                <!-- Lesson 2 -->
+                <div class="lesson" id="lesson2">
+                    <h2 class="lesson-title">Lesson 2: Ethical Codes and Philippine Laws</h2>
+                    <div class="topic">
+                        <h3>ACM Code of Ethics</h3>
+                        <p>The Association for Computing Machinery (ACM) Code is designed to inspire and guide ethical conduct of all computing professionals. It serves as a basis for remediation when violations occur, with the public good as the primary consideration.</p>
+                        <div class="highlight">
+                            <strong>Five Core Ethical Codes</strong>
+                            <ul>
+                                <li><strong>Integrity</strong> - Straightforward and honest in all relationships</li>
+                                <li><strong>Objectivity</strong> - Avoid bias and conflicts of interest</li>
+                                <li><strong>Professional Competence</strong> - Maintain current knowledge and skills</li>
+                                <li><strong>Confidentiality</strong> - Respect confidential information</li>
+                                <li><strong>Professional Behavior</strong> - Comply with laws and avoid discrediting the profession</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="topic">
+                        <h3>Philippine Cybercrime Laws</h3>
+                        <div class="laws-grid">
+                            <div class="law-item">
+                                <h4>RA 10175 - Cybercrime Prevention Act (2012)</h4>
+                                <p>Addresses crimes committed against and through computer systems. Covers 16 types of cybercrime including illegal access, data interference, cybersquatting, and cybersex.</p>
+                            </div>
+                            <div class="law-item">
+                                <h4>RA 8792 - E-Commerce Act (2000)</h4>
+                                <p>Provides recognition and use of electronic commercial and non-commercial transactions, with penalties for unlawful use.</p>
+                            </div>
+                            <div class="law-item">
+                                <h4>RA 10173 - Data Privacy Act (2012)</h4>
+                                <p>Protects fundamental human right of privacy while ensuring free flow of information to promote innovation and growth.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lesson 3 -->
+                <div class="lesson" id="lesson3">
+                    <h2 class="lesson-title">Lesson 3: Copyright Issues and Trademarks</h2>
+                    <div class="topic">
+                        <h3>Philippine Copyright Law (RA 8293)</h3>
+                        <p>The Intellectual Property Code of the Philippines secures and protects original works of owners. It covers intellectual property office, patents, trademarks, service marks, trade names, and copyrights.</p>
+                    </div>
+                    <div class="topic">
+                        <h3>Plagiarism</h3>
+                        <p>The act of taking another person's writing, conversation, song, or idea and passing it off as your own. This includes information from various media sources.</p>
+                        <div class="highlight">
+                            <strong>Ways to Avoid Plagiarism</strong>
+                            <ul>
+                                <li>Paraphrase properly</li>
+                                <li>Cite sources</li>
+                                <li>Use quotation marks</li>
+                                <li>Reference all materials</li>
+                                <li>Give proper credit</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="topic">
+                        <h3>Types of Ownership</h3>
+                        <p>Legal right to possession of tangible or intangible property. Includes corporeal/incorporeal, sole/co-ownership, legal/equitable, trust/beneficial, vested/contingent, and absolute/limited ownership.</p>
+                    </div>
+                    <div class="topic">
+                        <h3>Copyright Duration</h3>
+                        <ul>
+                            <li><strong>Photographs</strong> - 25 years</li>
+                            <li><strong>Films</strong> - 50 years</li>
+                            <li><strong>Publications</strong> - 70 years</li>
+                        </ul>
+                    </div>
+                    <div class="topic">
+                        <h3>Creative Commons and Software Licensing</h3>
+                        <p>Creative Commons provides global copyright-based licenses. Freeware and shareware are offered free but may have restrictions on modification and reverse engineering.</p>
+                    </div>
+                </div>
+				<!-- Lesson 4 -->
+<div class="lesson" id="lesson4">
+    <h2 class="lesson-title">Lesson 4: Internet Safety, Threats, Malware, and Antivirus Tools</h2>
+
+    <div class="topic">
+        <h3>Common Internet Threats</h3>
+        <ul>
+            <li><strong>Phishing</strong> – Fake emails or messages pretending to be trusted sources to steal information.</li>
+            <li><strong>Social Engineering</strong> – Manipulating people into giving away confidential data.</li>
+            <li><strong>Spyware</strong> – Hidden software that tracks your actions without permission.</li>
+            <li><strong>Ransomware</strong> – Locks your files and demands payment to release them.</li>
+            <li><strong>Keyloggers</strong> – Record what you type to steal passwords or data.</li>
+            <li><strong>Wi-Fi Sniffing</strong> – Intercepts unencrypted data on unsecured networks.</li>
+        </ul>
+        <p>⚠️ <em>These threats aim to steal data, harm devices, or manipulate behavior online.</em></p>
+    </div>
+
+    <div class="topic">
+        <h3>Tips to Stay Safe Online</h3>
+        <div class="highlight">
+            <ul>
+                <li><strong>Use Strong Passwords:</strong> Combine letters, numbers, and symbols. Don't reuse passwords.</li>
+                <li><strong>Enable Two-Factor Authentication:</strong> Adds extra protection even if your password is stolen.</li>
+                <li><strong>Update Software Regularly:</strong> Fixes known security issues in systems and apps.</li>
+                <li><strong>Think Before You Click:</strong> Avoid clicking suspicious links or downloading unknown files.</li>
+                <li><strong>Secure Your Wi-Fi:</strong> Use WPA3 encryption and change default router passwords.</li>
+                <li><strong>Use Legitimate Antivirus Software:</strong> It detects and prevents common malware.</li>
+                <li><strong>Check URLs Carefully:</strong> Fake websites often mimic trusted ones with small changes.</li>
+            </ul>
+            <p><em>Why? Being cautious online protects not just your device, but your identity and finances too.</em></p>
+        </div>
+    </div>
+
+    <div class="topic">
+        <h3>Types of Malware</h3>
+        <div class="laws-grid">
+            <div class="law-item">
+                <h4>Virus</h4>
+                <p>Attaches to files or programs and spreads. Needs user action to activate.</p>
+            </div>
+            <div class="law-item">
+                <h4>Worm</h4>
+                <p>Self-replicates and spreads without user input. Can slow down networks.</p>
+            </div>
+            <div class="law-item">
+                <h4>Trojan Horse</h4>
+                <p>Disguises as a normal program but performs harmful actions.</p>
+            </div>
+            <div class="law-item">
+                <h4>Ransomware</h4>
+                <p>Encrypts your data and asks for payment to unlock it.</p>
+            </div>
+            <div class="law-item">
+                <h4>Spyware</h4>
+                <p>Silently monitors and records your activities, often for identity theft.</p>
+            </div>
+            <div class="law-item">
+                <h4>Adware</h4>
+                <p>Displays unwanted ads and may redirect you to harmful sites.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="topic">
+        <h3>Popular Antivirus Tools</h3>
+        <div class="highlight">
+            <ul>
+                <li><strong>Windows Defender:</strong> Built-in on Windows, provides solid basic protection.</li>
+                <li><strong>Avast:</strong> Free and lightweight, good for everyday users.</li>
+                <li><strong>AVG:</strong> Reliable with web protection and scans.</li>
+                <li><strong>Bitdefender:</strong> Strong security features and low system impact.</li>
+                <li><strong>Kaspersky:</strong> Advanced protection and known for deep scanning.</li>
+                <li><strong>McAfee:</strong> Offers full-suite protection and a secure browser.</li>
+                <li><strong>Norton:</strong> Popular, all-in-one digital safety solution.</li>
+            </ul>
+            <p><em>Tip: Always keep your antivirus updated to defend against new threats.</em></p>
+        </div>
+    </div>
+</div>
+            </div>
+			
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="toc">
+                    <h3>Table of Contents</h3>
+                    <ul>
+                        <li><a href="#lesson1">Lesson 1: Introduction</a></li>
+                        <li><a href="#lesson2">Lesson 2: Ethical Codes</a></li>
+                        <li><a href="#lesson3">Lesson 3: Copyright Issues</a></li>
+						<li><a href="#lesson4">Lesson 4: Internet Safety</a></li>
+
+                        <li><a href="#laws">Acronyms Reference</a></li>
+                    </ul>
+                </div>
+
+                <div class="acronyms-section" id="laws">
+                    <h3>Philippine Laws Reference</h3>
+                    <div class="acronym">
+                        <strong>RA 8293 (1997)</strong><br>
+                        <em>Intellectual Property Code of the Philippines</em><br>
+                        <small>Protects original works and secures intellectual property rights including patents, trademarks, and copyrights</small>
+                    </div>
+                    <div class="acronym">
+                        <strong>RA 8792 (2000)</strong><br>
+                        <em>Electronic Commerce Act</em><br>
+                        <small>Recognizes electronic transactions and provides legal framework for e-commerce activities</small>
+                    </div>
+                    <div class="acronym">
+                        <strong>RA 10175 (2012)</strong><br>
+                        <em>Cybercrime Prevention Act</em><br>
+                        <small>Addresses crimes committed through computer systems and establishes penalties for cybercrimes</small>
+                    </div>
+                    <div class="acronym">
+                        <strong>RA 10173 (2012)</strong><br>
+                        <em>Data Privacy Act</em><br>
+                        <small>Protects individual privacy rights while promoting innovation and information flow</small>
+                    </div>
+                    <div class="acronym">
+                        <strong>RA 10372 (2012)</strong><br>
+                        <em>Amendment to IP Code</em><br>
+                        <small>Adds computer program decompilation as potential fair use for interoperability purposes</small>
+                    </div>
+                </div>
+
+                <div style="margin-top: 30px; padding: 20px; background: #e8f5e8; border-radius: 10px; text-align: center;">
+                    <h4 style="color: #2e7d32; margin-bottom: 10px;">Study Tip</h4>
+                    <p style="font-size: 0.9em; color: #388e3c;">Focus on understanding the principles behind each ethical code rather than memorizing them word-for-word.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
